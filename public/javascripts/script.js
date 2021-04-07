@@ -7,10 +7,28 @@
 //}
 
 // Iteration 1 using callbacks
+/*
 for (let i=0; i <steak.length; i++) {
   addFood(steak[i], '#steak', addFood);
 }
-
+*/
+addFood(steak[0], '#steak', () => {
+  addFood(steak[1], '#steak', () => {
+    addFood(steak[2], '#steak', () => {
+      addFood(steak[3], '#steak', () => {
+        addFood(steak[4], '#steak', () => {
+          addFood(steak[5], '#steak', () => {
+            addFood(steak[6], '#steak', () => {
+              addFood(steak[7], '#steak', () => {
+                return;
+              })
+            })
+          })
+        })
+      })
+    })
+  })
+});
 
 // Iteration 2 using `.then()`
 addFood(mashPotatoes[0], '#mashPotatoes').then(() => {
@@ -24,4 +42,4 @@ addFood(mashPotatoes[0], '#mashPotatoes').then(() => {
     // ... your code here
     
   }
-  makeFood(eachStep);
+  //makeFood(eachStep);
