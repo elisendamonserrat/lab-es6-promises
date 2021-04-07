@@ -20,7 +20,9 @@ addFood(steak[0], '#steak', () => {
           addFood(steak[5], '#steak', () => {
             addFood(steak[6], '#steak', () => {
               addFood(steak[7], '#steak', () => {
-                return;
+                const steakImg = document.createElement("img");
+                steakImg.src = "/public/images/steak.jpg"
+                document.getElementById("table").appendChild(steakImg);
               })
             })
           })
@@ -35,12 +37,16 @@ addFood(mashPotatoes[0], '#mashPotatoes')
   .then(() => { return addFood(mashPotatoes[1], '#mashPotatoes')})
   .then(() => { return addFood(mashPotatoes[2], '#mashPotatoes')})
   .then(() => { return addFood(mashPotatoes[3], '#mashPotatoes')})
-  .then(() => { return addFood(mashPotatoes[4], '#mashPotatoes')})
+  .then(() => { return addFood(mashPotatoes[4], '#mashPotatoes');})
+  .then(() => {
+    const mashPotatoesImg = document.createElement("img");
+    mashPotatoesImg.src = "/public/images/mashPotatoes.jpg"
+    document.getElementById("table").appendChild(mashPotatoesImg);
+  })
 
 // Iteration 3 using async and await
 
   async function makeFood(step) {
-    // ... your code here
-    
+
   }
-  //makeFood(eachStep);
+ // makeFood(eachStep);
