@@ -12,7 +12,7 @@ for (let i=0; i <steak.length; i++) {
   addFood(steak[i], '#steak', addFood);
 }
 */
-addFood(steak[0], '#steak', () => {
+let renderSteak = addFood(steak[0], '#steak', () => {
   addFood(steak[1], '#steak', () => {
     addFood(steak[2], '#steak', () => {
       addFood(steak[3], '#steak', () => {
@@ -33,7 +33,7 @@ addFood(steak[0], '#steak', () => {
 });
 
 // Iteration 2 using `.then()`
-addFood(mashPotatoes[0], '#mashPotatoes')
+let renderMashPotatoes = addFood(mashPotatoes[0], '#mashPotatoes')
   .then(() => { return addFood(mashPotatoes[1], '#mashPotatoes')})
   .then(() => { return addFood(mashPotatoes[2], '#mashPotatoes')})
   .then(() => { return addFood(mashPotatoes[3], '#mashPotatoes')})
@@ -44,9 +44,16 @@ addFood(mashPotatoes[0], '#mashPotatoes')
     document.getElementById("table").appendChild(mashPotatoesImg);
   })
 
+
 // Iteration 3 using async and await
 
   async function makeFood(step) {
 
   }
  // makeFood(eachStep);
+
+ //Bonus 2
+
+
+
+
